@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Thiago <thiago.nascimento@reclameaqui.com.br>",
+  "scripts": {
+    "test": "jest"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^26.0.15",
