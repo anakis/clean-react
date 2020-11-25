@@ -4,7 +4,10 @@
   "main": "index.js",
   "author": "Thiago <thiago.nascimento@reclameaqui.com.br>",
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "test:watch": "yarn test --watch",
+    "test:staged": "yarn test --findRelatedTests",
+    "test:ci": "yarn test --coverage"
   },
   "license": "MIT",
   "devDependencies": {
