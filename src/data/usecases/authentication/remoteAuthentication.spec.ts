@@ -1,7 +1,7 @@
-import { RemoteAuthentication } from './RemoteAuthentication'
-import { HttpPostClientSpy } from '../../test/mockHttpClient'
 import faker from 'faker'
-import { mockAuthentication } from '../../../domain/test/mockAuthentication'
+import { RemoteAuthentication } from '@/data/usecases/authentication/RemoteAuthentication'
+import { HttpPostClientSpy } from '@/data/test/mockHttpClient'
+import { mockAuthentication } from '@/domain/test/mockAuthentication'
 
 // SUT = "System Under Test"
 

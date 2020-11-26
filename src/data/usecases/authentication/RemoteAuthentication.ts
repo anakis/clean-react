@@ -1,5 +1,5 @@
-import { HttpPostClient } from 'data/protocols/http/httPostClient'
-import { AuthenticationParams } from 'domain/usecases/authentication'
+import { HttpPostClient } from '@/data/protocols/http/httPostClient'
+import { AuthenticationParams } from '@/domain/usecases/authentication'
 
 export class RemoteAuthentication {
   constructor (
