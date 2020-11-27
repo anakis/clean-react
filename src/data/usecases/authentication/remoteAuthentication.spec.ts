@@ -1,13 +1,11 @@
 import faker from 'faker'
 import { RemoteAuthentication } from '@/data/usecases/authentication/RemoteAuthentication'
-import { HttpPostClientSpy } from '@/data/test/mockHttpClient'
-import { mockAuthentication, mockAccountModel } from '@/domain/test/mockAccount'
-import { InvalidCredentialsError } from '@/domain/errors/InvalidCredentialsError'
-import { HttpStatusCode } from '@/data/protocols/http/httpResponse'
-import { UnexpectedError } from '@/domain/errors/UnexpectedError'
-import { AuthenticationParams } from '@/domain/usecases/authentication'
-import { AccountModel } from '@/domain/models/accountModel'
-
+import { HttpPostClientSpy } from '@/data/test'
+import { AuthenticationParams } from '@/domain/usecases'
+import { AccountModel } from '@/domain/models'
+import { mockAuthentication, mockAccountModel } from '@/domain/test'
+import { HttpStatusCode } from '@/data/protocols/http'
+import { InvalidCredentialsError, UnexpectedError } from '@/domain/errors'
 // SUT = "System Under Test"
 
 type SutTypes = {
