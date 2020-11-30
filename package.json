@@ -4,7 +4,7 @@
   "main": "index.js",
   "author": "Thiago <thiago.nascimento@reclameaqui.com.br>",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "start": "webpack serve",
     "test": "jest --passWithNoTests --no-cache --runInBand",
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests",
@@ -12,6 +12,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@svgr/webpack": "^5.5.0",
     "@types/axios": "^0.14.0",
     "@types/faker": "^5.1.4",
     "@types/jest": "^26.0.15",
