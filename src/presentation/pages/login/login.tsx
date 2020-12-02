@@ -1,9 +1,6 @@
 import React from 'react'
 import Styles from './login.scss'
-import LoginHeader from '@/presentation/components/loginHeader/loginHeader'
-import Footer from '@/presentation/components/footer/footer'
-import Input from '@/presentation/components/input/input'
-import FormStatus from '@/presentation/components/formStatus/formStatus'
+import { Footer, LoginHeader, Input, FormStatus } from '@/presentation/components'
 
 const Login = (): React.ReactElement => (
   <div className={Styles.login}>

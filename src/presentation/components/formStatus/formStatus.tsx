@@ -1,6 +1,6 @@
 import React from 'react'
 import Styles from './formStatus.scss'
-import Spinner from '@/presentation/components/spinner/spinner'
+import { Spinner } from '@/presentation/components'
 
 const FormStatus = () => (
   <div className={Styles.errorWrap}>

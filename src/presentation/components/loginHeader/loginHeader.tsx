@@ -1,6 +1,6 @@
 import React from 'react'
-import Logo from '@/presentation/components/logo/logo'
 import Styles from './loginHeader.scss'
+import { Logo } from '@/presentation/components'
 
 const LoginHeader = () => (
   <header className={Styles.header}>
