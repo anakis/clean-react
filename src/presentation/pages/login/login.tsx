@@ -10,7 +10,7 @@ type Props = {
 const Login = ({ validation }: Props): React.ReactElement => {
   const [state, setState] = useState({
     isLoading: false,
-    emailError: 'Campo obrigatório',
+    emailError: '',
     passwordError: 'Campo obrigatório',
     mainError: '',
     email: '',
@@ -18,7 +18,10 @@ const Login = ({ validation }: Props): React.ReactElement => {
   })
 
   useEffect(() => {
-    validation.validate('email', state.email)
+    setState({
+      ...state,
+      emailError: validation.validate('email', state.email)
+    })
   }, [state.email])
 
   useEffect(() => {
