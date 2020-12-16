@@ -17,9 +17,9 @@ const Input = (props: InputProps) => {
       [event.target.name]: event.target.value
     })
   }
-  const getStatus = () => '🔴'
+  const getStatus = () => error ? '🔴' : '🟢'
 
-  const getTitle = () => error
+  const getTitle = () => error || 'Tudo certo'
   return (
     <div className={Styles.inputWrap}>
       <input onChange={handleChange} {...props} data-testid={props.name} readOnly onFocus={enableInput}/>
