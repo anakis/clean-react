@@ -4982,6 +4982,11 @@ jest-leak-detector@^26.6.2:
     jest-get-type "^26.3.0"
     pretty-format "^26.6.2"
 
+jest-localstorage-mock@^2.4.5:
+  version "2.4.5"
+  resolved "https://nexus.obviostaging.com.br/repository/reclameaqui-group/jest-localstorage-mock/-/jest-localstorage-mock-2.4.5.tgz#d7f98cc750d125062dfd5c9f99560bff9d140f06"
+  integrity sha512-ouu/Z7QKWVzC32avBxeYitOs5p+pfxj6buiX2oGjVSEkI3+mryIRgCgrnB4O+DohU+xBzkCtJov7nBzFn3nuVQ==
+
 jest-matcher-utils@^26.6.2:
   version "26.6.2"
   resolved "https://nexus.obviostaging.com.br/repository/reclameaqui-group/jest-matcher-utils/-/jest-matcher-utils-26.6.2.tgz#8e6fd6e863c8b2d31ac6472eeb237bc595e53e7a"
