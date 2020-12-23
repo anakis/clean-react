@@ -24,8 +24,10 @@ jobs:
       - name: Lint
       - run: yarn lint
       
-      - name: Coverage
+      - name: Test
       - run: yarn test:coverage
+      
+      - name: Coverage      
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
