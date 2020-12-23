@@ -9,7 +9,8 @@
     "test:watch": "yarn test --watch",
     "test:staged": "yarn test --findRelatedTests",
     "test:ci": "yarn test --coverage",
-    "lint": "eslint 'src/**' --fix"
+    "lint": "eslint 'src/**'",
+    "lint:fix": "eslint 'src/**' --fix"
   },
   "license": "MIT",
   "devDependencies": {
