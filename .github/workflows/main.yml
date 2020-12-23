@@ -9,7 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cache
       - uses: actions/cache@v2
         with:
           path: '**/node_modules'
@@ -19,13 +18,13 @@ jobs:
         uses: actions/setup-node@v1  
 
       - name: Install
-      - run: yarn --frozen-lockfile
+        run: yarn --frozen-lockfile
 
       - name: Lint
-      - run: yarn lint
+        run: yarn lint
 
       - name: Test
-      - run: yarn test:coverage
+        run: yarn test:coverage
 
       - name: Coverage      
         uses: coverallsapp/github-action@master
