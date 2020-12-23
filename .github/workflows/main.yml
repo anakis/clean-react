@@ -12,6 +12,6 @@ jobs:
         uses: actions/setup-node@v1      
       - run: yarn
       - run: yarn lint
-      - run: yarn test:ci
+      - run: yarn test:coverage
         env:
           CI: true
