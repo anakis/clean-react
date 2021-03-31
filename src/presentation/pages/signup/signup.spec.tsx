@@ -1,7 +1,7 @@
 import React from 'react'
 import SignUp from './signup'
 import { createMemoryHistory } from 'history'
-import { cleanup, fireEvent, render, RenderResult } from '@testing-library/react'
+import { cleanup, render, RenderResult } from '@testing-library/react'
 import { Router } from 'react-router-dom'
 import { Helper, ValidationStub } from '@/presentation/test'
 import faker from 'faker'
@@ -29,11 +29,6 @@ const makeSut = (params?: SutParams): SutTypes => {
   }
 }
 
-const populateField = (sut: RenderResult, fieldName: string, value = faker.random.word()) => {
-  const input = sut.getByTestId(fieldName)
-  fireEvent.input(input, { target: { value } })
-}
-
 describe('Signup', () => {
   afterEach(cleanup)
 
@@ -53,7 +48,7 @@ describe('Signup', () => {
     const validationError = faker.random.words()
     const { sut } = makeSut({ validationError })
 
-    populateField(sut, 'name')
+    Helper.populateField(sut, 'name')
 
     Helper.testStatusForField(sut, 'name', validationError)
   })
