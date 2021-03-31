@@ -79,4 +79,36 @@ describe('Signup', () => {
 
     Helper.testStatusForField(sut, 'passwordConfirmation', validationError)
   })
+
+  it('Should show valid name state if Validation succeeds', () => {
+    const { sut } = makeSut()
+
+    Helper.populateField(sut, 'name')
+
+    Helper.testStatusForField(sut, 'name')
+  })
+
+  it('Should show valid email state if Validation succeeds', () => {
+    const { sut } = makeSut()
+
+    Helper.populateField(sut, 'email')
+
+    Helper.testStatusForField(sut, 'email')
+  })
+
+  it('Should show valid password state if Validation succeeds', () => {
+    const { sut } = makeSut()
+
+    Helper.populateField(sut, 'password')
+
+    Helper.testStatusForField(sut, 'password')
+  })
+
+  it('Should show valid passwordConfirmation state if Validation succeeds', () => {
+    const { sut } = makeSut()
+
+    Helper.populateField(sut, 'passwordConfirmation')
+
+    Helper.testStatusForField(sut, 'passwordConfirmation')
+  })
 })
