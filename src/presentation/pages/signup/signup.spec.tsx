@@ -5,6 +5,7 @@ import { cleanup, fireEvent, render, RenderResult, waitFor } from '@testing-libr
 import { Router } from 'react-router-dom'
 import { AddAccountSpy, Helper, ValidationStub } from '@/presentation/test'
 import faker from 'faker'
+import { EmailInUseError } from '@/domain/errors'
 
 const history = createMemoryHistory({ initialEntries: ['/signup'] })
 
@@ -44,6 +45,11 @@ const simulateValidSubmit = async (sut: RenderResult, name = faker.name.findName
   const form = sut.getByTestId('form')
   fireEvent.submit(form)
   await waitFor(() => form)
+}
+
+const testElementText = (sut: RenderResult, fieldName: string, value: string) => {
+  const element = sut.getByTestId(fieldName)
+  expect(element.textContent).toBe(value)
 }
 
 describe('Signup', () => {
@@ -175,5 +181,16 @@ describe('Signup', () => {
     await simulateValidSubmit(sut)
 
     expect(addAccountSpy.callsCount).toBe(0)
+  })
+
+  it('Should present error if Authentication fails', async () => {
+    const { sut, addAccountSpy } = makeSut()
+    const error = new EmailInUseError()
+
+    jest.spyOn(addAccountSpy, 'add').mockRejectedValueOnce(error)
+    await simulateValidSubmit(sut)
+
+    testElementText(sut, 'main-error', error.message)
+    Helper.testChildCount(sut, 'error-wrap', 1)
   })
 })
