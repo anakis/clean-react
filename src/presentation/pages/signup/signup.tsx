@@ -69,7 +69,7 @@ const SignUp = ({ validation, addAccount, saveAccessToken }: Props): React.React
           <Input type="password" name="password" placeholder="Digite sua senha" />
           <Input type="password" name="passwordConfirmation" placeholder="Repita sua senha" />
           <button data-testid="submit" disabled={!!(state.nameError || state.emailError || state.passwordError || state.passwordConfirmationError)} className={Styles.submit} type="submit">Salvar</button>
-          <Link to="/login" className={Styles.link}>Voltar para Login</Link>
+          <Link data-testid="login-link" to="/login" replace className={Styles.link}>Voltar para Login</Link>
           <FormStatus />
         </form>
 
