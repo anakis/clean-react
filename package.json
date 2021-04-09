@@ -2,7 +2,7 @@
   "name": "clean-react",
   "version": "1.3.0",
   "main": "index.js",
-  "author": "Thiago <thiago.nascimento@reclameaqui.com.br>",
+  "author": "Thiago <thiag.g3@gmail.com>",
   "scripts": {
     "start": "webpack serve",
     "test": "jest --passWithNoTests --no-cache --runInBand",
