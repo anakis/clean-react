@@ -2,10 +2,10 @@ import { FieldValidation } from '@/validation/protocols/fieldValidation'
 import { InvalidFieldError } from '@/validation/errors'
 
 export class CompareFieldsValidation implements FieldValidation {
-  constructor (readonly field: string, private readonly valueToCompare: string) {}
+  constructor (readonly field: string, private readonly fieldToCompare: string) {}
 
-  validate (value: string): Error {
-    if (value !== this.valueToCompare) { return new InvalidFieldError() }
+  validate (input: object): Error {
+    if (input[this.field] !== input[this.fieldToCompare]) { return new InvalidFieldError() }
     return null
   }
 }
